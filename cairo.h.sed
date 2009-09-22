@@ -1,18 +1,29 @@
-s/cairo_anti_alias_t/KairoAntiAlias/g
+# All enum members should go into our namespace
+
 s/CAIRO_/KAIRO_/g
+
+# But do not rename CAIRO_HAS_FEATURE_* macros
+
 s/KAIRO_HAS_/CAIRO_HAS_/g
+
+# Rename enums
+
+s/cairo_anti_alias_t/KairoAntiAlias/g
 s/cairo_content_t/KairoContent/g
-s/cairo_t/KairoContext/g
 s/cairo_fill_rule_t/KairoFillRule/g
 s/cairo_format_t/KairoFormat/g
 s/cairo_line_cap_t/KairoLineCap/g
 s/cairo_line_join_t/KairoLineJoin/g
 s/cairo_operator_t/KairoOperator/g
-s/cairo_pattern_t/KairoPattern/g
 s/cairo_status_t/KairoStatus/g
-#
-# Cairo Context methods
-# 
+
+# Cairo Pattern
+
+s/cairo_pattern_t/KairoPattern/g
+
+# Cairo Context
+
+s/cairo_t/KairoContext/g
 s/cairo_create/kairo_context_create/g
 s/cairo_reference/kairo_context_reference/g
 s/cairo_destroy/kairo_context_destroy/g
@@ -104,17 +115,18 @@ s/cairo_rel_curve_to/kairo_context_rel_curve_to/g
 s/cairo_rel_line_to/kairo_context_rel_line_to/g
 s/cairo_rel_move_to/kairo_context_rel_move_to/g
 s/cairo_path_extents/kairo_context_path_extents/g
-#
+
 # Image Surface
-#
+
 s/cairo_image_surface_t/KairoImageSurface/g
 s/cairo_image_surface_create/_cairo_image_surface_create/g
 s/cairo_image_surface/kairo_image_surface/g
-#
-#
+
 # Surface
+
 s/cairo_surface_t/KairoSurface/g
 s/cairo_surface/kairo_surface/g
 
 # Everything else
+
 s/cairo_/kairo_/g
