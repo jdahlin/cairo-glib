@@ -1,18 +1,25 @@
 SOURCES = cairo-glib.c cairo-glib.h
 
 
-all: CairoGLib.typelib CairoGLib.gir libcairo-glib.so
+all: cairo-1.0.typelib cairo-1.0.gir libcairo-glib.so
 
 libcairo-glib.so: $(SOURCES)
-	gcc -g -ldl -shared -o libcairo-glib.so cairo-glib.c `pkg-config --cflags --libs gobject-2.0 cairo`
+	gcc -g -shared -o libcairo-glib.so cairo-glib.c `pkg-config --cflags --libs gobject-2.0 cairo`
 
-CairoGLib.gir: libcairo-glib.so
-	g-ir-scanner -DSCANNER --strip-prefix=Kairo -L. -n CairoGLib cairo-glib.c cairo-glib.h --library=cairo-glib --pkg glib-2.0 --pkg cairo --nsversion=1.0 > CairoGLib.gir
+cairo-1.0.gir: libcairo-glib.so
+	g-ir-scanner -DSCANNER --strip-prefix=Kairo \
+		-L. -n cairo \
+		cairo-glib.c cairo-glib.h \
+		--library=cairo \
+		--library=cairo-glib \
+		--pkg glib-2.0 \
+		--pkg cairo \
+		--nsversion=1.0 | sed -f CairoGLib.gir.sed > cairo-1.0.gir
 
-CairoGLib.typelib: CairoGLib.gir
-	g-ir-compiler -o CairoGLib.typelib CairoGLib.gir
+cairo-1.0.typelib: cairo-1.0.gir
+	g-ir-compiler -o cairo-1.0.typelib cairo-1.0.gir
 
 clean:
-	rm -fr CairoGLib.gir CairoGLib.typelib libcairo-glib.so
+	rm -fr cairo-1.0.gir cairo-1.0.typelib libcairo-glib.so
 
-.PHONY: libcairo-glib.so CairoGLib.gir CairoGLib.typelib
+.PHONY: libcairo-glib.so cairo-1.0.gir cairo-1.0.typelib

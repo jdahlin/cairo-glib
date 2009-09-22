@@ -1,4 +1,5 @@
-const Cairo = imports.gi.CairoGLib;
+const Cairo = imports.gi.cairo;
+
 let imageSurface = Cairo.image_surface_create(Cairo.Format.RGB24, 1000, 1000);
 let surface = imageSurface.get_surface();
 

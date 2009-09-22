@@ -1,10 +1,16 @@
 #include <cairo.h>
 #include <glib-object.h>
 
+GType kairo_surface_get_type (void);
+GType kairo_image_surface_get_type (void);
+GType kairo_context_get_type (void);
+
 typedef struct cairo_t KairoContext;
 typedef struct cairo_surface_t KairoSurface;
 typedef struct kairo_context_image_surface_t KairoImageSurface;
 typedef struct kairo_context_pattern_t KairoPattern;
+
+KairoSurface* kairo_image_surface_get_surface (KairoImageSurface *image_surface);
 
 typedef enum {
     KAIRO_STATUS_SUCCESS = 0,
@@ -117,21 +123,17 @@ typedef enum {
 } KairoLineJoin;
 
 /* Surface */
-GType kairo_surface_get_type (void);
 KairoSurfaceType kairo_surface_get_surface_type (KairoSurface *surface);
 KairoStatus kairo_surface_get_status (KairoSurface *surface);
 KairoStatus kairo_surface_write_to_png (KairoSurface *surface,
                                         const char *filename);
 
 /* ImageSurface */
-GType kairo_image_surface_get_type (void);
 KairoImageSurface* kairo_image_surface_create (KairoFormat format, int width, int height);
-KairoSurface* kairo_image_surface_get_surface (KairoImageSurface *image_surface);
 int kairo_image_surface_get_height (KairoImageSurface *image_surface);
 int kairo_image_surface_get_width (KairoImageSurface *image_surface);
 
 /* Context */
-GType kairo_context_get_type (void);
 KairoContext* kairo_context_create (KairoSurface *target);
 KairoStatus kairo_context_get_status (KairoContext *context);
 void kairo_context_set_surface (KairoContext *context, KairoSurface *surface, double x, double y);
