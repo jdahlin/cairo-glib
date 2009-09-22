@@ -14,7 +14,7 @@ cairo-1.0.gir: libcairo-glib.so
 		--library=cairo-glib \
 		--pkg glib-2.0 \
 		--pkg cairo \
-		--nsversion=1.0 | sed -f CairoGLib.gir.sed > cairo-1.0.gir
+		--nsversion=1.0 | sed -f cairo-1.0.gir.sed > cairo-1.0.gir
 
 cairo-1.0.typelib: cairo-1.0.gir
 	g-ir-compiler -o cairo-1.0.typelib cairo-1.0.gir
