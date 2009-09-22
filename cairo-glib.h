@@ -1,19 +1,19 @@
 #include <cairo.h>
 #include <glib-object.h>
 
-GType kairo_surface_get_type (void);
-GType kairo_image_surface_get_type (void);
-GType kairo_context_get_type (void);
+GType cairo_glib_surface_get_type (void);
+GType cairo_glib_image_surface_get_type (void);
+GType cairo_glib_context_get_type (void);
 
-typedef struct cairo_surface_t KairoSurface;
-typedef struct cairo_image_surface_t KairoImageSurface;
-typedef enum cairo_format_t KairoFormat;
+typedef struct cairo_surface_t CairoGlibSurface;
+typedef struct cairo_image_surface_t CairoGlibImageSurface;
+typedef enum cairo_format_t CairoGlibFormat;
 
-KairoSurface* kairo_image_surface_get_surface (KairoImageSurface *image_surface);
+CairoGlibSurface* cairo_glib_image_surface_get_surface (CairoGlibImageSurface *image_surface);
 
-KairoImageSurface* kairo_image_surface_create (KairoFormat format, int width, int height);
-KairoImageSurface* kairo_image_surface_create_for_data (unsigned char* data, KairoFormat format, 
-                                                        int width, int height, int stride);
-int kairo_image_surface_get_height (KairoImageSurface *image_surface);
-int kairo_image_surface_get_width (KairoImageSurface *image_surface);
+CairoGlibImageSurface* cairo_glib_image_surface_create (CairoGlibFormat format, int width, int height);
+CairoGlibImageSurface* cairo_glib_image_surface_create_for_data (unsigned char* data, CairoGlibFormat format, 
+                                                                 int width, int height, int stride);
+int cairo_glib_image_surface_get_height (CairoGlibImageSurface *image_surface);
+int cairo_glib_image_surface_get_width (CairoGlibImageSurface *image_surface);
 

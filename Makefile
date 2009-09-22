@@ -11,7 +11,7 @@ cairo.h:
 	cat $(CAIRO_INCLUDEDIR)/cairo.h  | sed -f cairo.h.sed > cairo.h
 
 cairo-1.0.gir: libcairo-glib.so cairo.h
-	g-ir-scanner -DCAIRO_HAS_PNG_FUNCTIONS -DSCANNER --strip-prefix=Kairo \
+	g-ir-scanner -DCAIRO_HAS_PNG_FUNCTIONS -DSCANNER --strip-prefix=CairoGlib \
 		-L. -n cairo \
 		cairo.h cairo-glib.c cairo-glib.h \
 		--library=cairo \
