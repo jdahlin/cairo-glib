@@ -1,6 +1,7 @@
 const Cairo = imports.gi.cairo;
 
 let imageSurface = Cairo.image_surface_create(Cairo.Format.RGB24, 1000, 1000);
+log(imageSurface);
 let surface = imageSurface.get_surface();
 
 let xc = 128.0;
