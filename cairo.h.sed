@@ -23,7 +23,8 @@ s/cairo_pattern_t/CairoGlibPattern/g
 s/cairo_pattern_/cairo_glib_pattern_/g
 
 # Cairo Context
-s/cairo_t/CairoGlibContext/g
+s/struct _cairo cairo_t/struct _cairo CairoGlibContext/g
+s/cairo_t\s+/CairoGlibContext /g
 s/cairo_create/cairo_glib_context_create/g
 s/cairo_reference/cairo_glib_context_reference/g
 s/cairo_destroy/cairo_glib_context_destroy/g

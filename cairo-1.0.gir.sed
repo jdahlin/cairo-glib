@@ -12,7 +12,6 @@ s/CairoGlibStatus/cairo_status_t/g
 s/CairoGlibContext/cairo_t/g
 s/glib:type-name=\"cairo_t\"/glib:type-name=\"CairoGLibContext\"/g
 s/\"glib_context/\"cairo/g
-s/cairo_get_type/cairo_glib_context_get_type/g
 s/cairo_glib_context_/cairo_/g
 s/cairo_get_type/cairo_glib_context_get_type/g
 s/function\ name=\"cairo_create/function name=\"context_create/g
