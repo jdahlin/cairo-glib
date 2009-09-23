@@ -11,6 +11,7 @@ s/CAIRO_GLIB_HAS_/CAIRO_HAS_/g
 s/cairo_anti_alias_t/CairoGlibAntiAlias/g
 s/cairo_content_t/CairoGlibContent/g
 s/cairo_fill_rule_t/CairoGlibFillRule/g
+s/cairo_font_t/CairoGlibFont/g
 s/cairo_format_t/CairoGlibFormat/g
 s/cairo_line_cap_t/CairoGlibLineCap/g
 s/cairo_line_join_t/CairoGlibLineJoin/g
@@ -19,6 +20,7 @@ s/cairo_status_t/CairoGlibStatus/g
 
 # Cairo Pattern
 s/cairo_pattern_t/CairoGlibPattern/g
+s/cairo_pattern_/cairo_glib_pattern_/g
 
 # Cairo Context
 s/cairo_t/CairoGlibContext/g
@@ -126,4 +128,20 @@ s/cairo_surface/cairo_glib_surface/g
 # Matrix
 s/cairo_matrix_t/CairoGlibMatrix/g
 s/cairo_matrix_/cairo_glib_matrix_/g
+
+# FontFace
+s/cairo_font_face_t/CairoGlibFontFace/g
+s/cairo_font_face_/cairo_glib_font_face_/g
+
+# ScaledFace
+s/cairo_scaled_font_t/CairoGlibScaledFont/g
+s/cairo_scaled_font_/cairo_glib_scaled_font_/g
+
+# FontOptions
+s/cairo_font_options_t/CairoGlibFontOptions/g
+s/cairo_font_options_/cairo_glib_font_options_/g
+
+# Path
+s/cairo_path_t/CairoGlibPath/g
+
 

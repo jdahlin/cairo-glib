@@ -4,6 +4,10 @@
 GType cairo_glib_surface_get_type (void);
 GType cairo_glib_image_surface_get_type (void);
 GType cairo_glib_context_get_type (void);
+GType cairo_glib_matrix_get_type (void);
+GType cairo_glib_font_face_get_type (void);
+GType cairo_glib_scaled_font_get_type (void);
+GType cairo_glib_font_options_get_type (void);
 
 typedef struct cairo_surface_t CairoGlibSurface;
 typedef struct cairo_image_surface_t CairoGlibImageSurface;

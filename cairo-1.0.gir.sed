@@ -6,7 +6,6 @@ s/CairoGlibFormat/cairo_format_t/g
 s/CairoGlibLineCap/cairo_line_cap_t/g
 s/CairoGlibLineJoin/cairo_line_join_t/g
 s/CairoGlibOperator/cairo_operator_t/g
-s/CairoGlibPattern/cairo_pattern_t/g
 s/CairoGlibStatus/cairo_status_t/g
 
 # Context
@@ -37,6 +36,25 @@ s/cairo_image_surface_get_surface/cairo_glib_image_surface_get_surface/g
 # Matrix
 s/cairo_matrix_t/CairoGlibMatrix/g
 s/cairo_glib_matrix_/cairo_matrix_/g
+
+# Pattern
+s/CairoGlibPattern/cairo_pattern_t/g
+s/cairo_glib_pattern_/cairo_pattern_/g
+
+# FontFace
+s/CairoGlibFontFace/cairo_font_face_t/g
+s/cairo_glib_font_face_/cairo_font_face_/g
+
+# ScaledFace
+s/CairoGlibScaledFont/cairo_scaled_font_t/g
+s/cairo_glib_scaled_font_/cairo_scaled_font_/g
+
+# FontOptions
+s/CairoGlibFontOptions/cairo_font_options_t/g
+s/cairo_glib_font_options_/cairo_font_options_/g
+
+# Path
+s/CairoGlibPath/cairo_path_t/g
 
 # GLib API changes
 s/cairo_get_status/cairo_status/g
