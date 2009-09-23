@@ -1,5 +1,5 @@
-s/CairoGlibAntiAlias/cairo_anti_alias_t/g
 s/CAIRO_GLIB_/CAIRO_/g
+s/CairoGlibAntiAlias/cairo_anti_alias_t/g
 s/CairoGlibContent/cairo_content_t/g
 s/CairoGlibContext/cairo_t/g
 s/CairoGlibFillRule/cairo_fill_rule_t/g
@@ -13,7 +13,7 @@ s/CairoGlibStatus/cairo_status_t/g
 s/CairoGlibSurface/cairo_surface_t/g
 
 # Context
-s/type-name=\"cairo_t\"/type-name=\"CairoGLibContext\"/g
+s/glib:type-name=\"cairo_t\"/glib:type-name=\"CairoGLibContext\"/g
 s/\"glib_context/\"cairo/g
 s/cairo_get_type/cairo_glib_context_get_type/g
 s/cairo_glib_context_/cairo_/g
@@ -28,7 +28,7 @@ s/glib:type-name=\"cairo_surface_t\"/glib:type-name=\"CairoGlibSurface\"/g
 s/glib:get-type=\"cairo_surface_get_type\"/glib:get-type=\"cairo_glib_surface_get_type\"/g
 
 # ImageSurface
-s/type-name=\"cairo_image_surface_t\"/type-name=\"CairoGlibImageSurface\"/g
+s/glib:type-name=\"cairo_image_surface_t\"/glib:type-name=\"CairoGlibImageSurface\"/g
 s/\"glib_image_surface/\"image_surface/g
 s/cairo_glib_image_surface/cairo_image_surface/g
 s/cairo_image_surface_get_type/cairo_glib_image_surface_get_type/g
