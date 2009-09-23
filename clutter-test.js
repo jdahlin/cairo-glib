@@ -9,6 +9,9 @@ let texture = new Clutter.CairoTexture({surface_width: 500, surface_height: 500}
 stage.add_actor(texture);
 
 let cr = texture.create();
+if (cr.status() != 0) {
+   throw Error(cr.status());
+}
 cr.translate(130, 30);
 let matrix = new Cairo.Matrix();
 matrix.init(1.0, 0.5, 0.0, 1.0, 0.0, 0.0);
