@@ -18,11 +18,9 @@ s/cairo_operator_t/CairoGlibOperator/g
 s/cairo_status_t/CairoGlibStatus/g
 
 # Cairo Pattern
-
 s/cairo_pattern_t/CairoGlibPattern/g
 
 # Cairo Context
-
 s/cairo_t/CairoGlibContext/g
 s/cairo_create/cairo_glib_context_create/g
 s/cairo_reference/cairo_glib_context_reference/g
@@ -117,12 +115,15 @@ s/cairo_rel_move_to/cairo_glib_context_rel_move_to/g
 s/cairo_path_extents/cairo_glib_context_path_extents/g
 
 # Image Surface
-
 s/cairo_image_surface_t/CairoGlibImageSurface/g
 s/cairo_image_surface_create/_cairo_image_surface_create/g
 s/cairo_image_surface/cairo_glib_image_surface/g
 
 # Surface
-
 s/cairo_surface_t/CairoGlibSurface/g
 s/cairo_surface/cairo_glib_surface/g
+
+# Matrix
+s/cairo_matrix_t/CairoGlibMatrix/g
+s/cairo_matrix_/cairo_glib_matrix_/g
+

@@ -34,5 +34,9 @@ s/cairo_glib_image_surface/cairo_image_surface/g
 s/cairo_image_surface_get_type/cairo_glib_image_surface_get_type/g
 s/cairo_image_surface_get_surface/cairo_glib_image_surface_get_surface/g
 
+# Matrix
+s/cairo_matrix_t/CairoGlibMatrix/g
+s/cairo_glib_matrix_/cairo_matrix_/g
+
 # GLib API changes
 s/cairo_get_status/cairo_status/g
