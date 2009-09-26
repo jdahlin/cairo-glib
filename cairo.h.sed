@@ -8,7 +8,7 @@ s/CAIRO_GLIB_HAS_/CAIRO_HAS_/g
 
 # Rename enums
 
-s/cairo_anti_alias_t/CairoGlibAntiAlias/g
+s/cairo_antialias_t/CairoGlibAntialias/g
 s/cairo_content_t/CairoGlibContent/g
 s/cairo_fill_rule_t/CairoGlibFillRule/g
 s/cairo_font_t/CairoGlibFont/g
